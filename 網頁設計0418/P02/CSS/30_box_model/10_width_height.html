@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        #img1 {
+            /*試試看用百分比的方式設定寬度，隨著父元素改變*/
+            width: 50%;
+        }
+
+        #img2 {
+            /*試試看將圖片的寬度設定為477px，查看變化*/
+            width: 477px;
+        }
+
+        .fit {
+            /*試試看將寬度設定為400px; 高度設定為100px; */
+            width: 400px;
+            height: 100px;
+            border: 5px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <img id="img1" src="img/sunny.jpg">
+    <br><br>
+    <img id="img2" src="img/sunny.jpg">
+    <hr>
+    <h1>原始圖片</h1>
+    <img class="fit" src="img/sunny.jpg">
+    <br><br>
+    <!-- 試試object-fit -->
+    <h1>fill預設</h1>
+    <img class="fit" src="img/sunny.jpg" style="object-fit: fill;">
+    <h1>cover縮小範圍，其餘捨棄</h1>
+    <img class="fit" src="img/sunny.jpg" style="object-fit: cover;">
+    <h1>contain縮小圖，符合框大小</h1>
+    <img class="fit" src="img/sunny.jpg" style="object-fit: contain;">
+    <h1>none不會調整</h1>
+    <img class="fit" src="img/sunny.jpg" style="object-fit: none;">
+    
+</body>
+
+</html>

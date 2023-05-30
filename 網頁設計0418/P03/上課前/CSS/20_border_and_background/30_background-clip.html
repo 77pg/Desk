@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>background-clip</title>
+
+    <style>
+        div {
+            background-color: aqua;
+            border: 10px dotted black;
+            width: 300px;
+        }
+
+        /* 完成一個步驟後，請先觀察畫面變化，再執行下一個步驟 */
+        /* 1. 設定 padding: 20px */
+        #div2 {  }
+
+        /* 2. 設定 padding: 20px + background-clip: border-box */
+        #div3 {  }
+
+        /* 3. 設定 padding: 20px + background-clip: padding-box */
+        #div4 {  }
+
+        /* 4. 設定 padding: 20px + background-clip: content-box */
+        #div5 {  }
+    </style>
+
+</head>
+
+<body>
+    <div id="div1">
+        <span>原始div</span>
+    </div>
+
+    <hr>
+
+    <div id="div2">
+        <span> 設定 padding: 20px </span>
+    </div>
+
+    <hr>
+
+    <div id="div3">
+        <span>background-clip: border-box (預設)</span>
+    </div>
+
+    <hr>
+
+    <div id="div4">
+        <span>background-clip: padding-box </span>
+    </div>
+
+    <hr>
+
+    <div id="div5">
+        <span>background-clip: content-box </span>
+    </div>
+
+    <hr>
+</body>
+
+</html>

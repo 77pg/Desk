@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>clip-path</title>
+
+    <style>
+        div {
+            width: 250px;
+            height: 250px;
+            background: lightcoral;
+        }
+
+        /* 1. 透過 clip-path: polygon() 在網頁上取得三角形區塊 */
+        .demo2 {
+            clip-path: polygon(50% 0, 0 100%, 100% 100%);
+        }
+
+        /* 2. 透過 clip-path: circle() 在網頁上取得圓形區塊 */
+        .demo3 {
+            clip-path: circle(49.8% at 50% 50%);
+        }
+
+        /* 3. 透過 clip-path: polygon() 在網頁上取得多邊形區塊 */
+        .demo4 {
+            clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+        }
+    </style>
+</head>
+
+<body>
+    <p><a href="https://bennettfeely.com/clippy/">CSS clip-path maker</a></p>
+    <hr>
+    <div> 對照組 </div>
+    <hr>
+    <div class="demo2"></div>
+    <hr>
+    <div class="demo3"></div>
+    <div class="demo4"></div>
+</body>
+
+</html>

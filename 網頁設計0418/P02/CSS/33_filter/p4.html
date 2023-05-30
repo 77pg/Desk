@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter4</title>
+    <style>
+        /* 改變圖案大小 */
+        img {
+            width: 500px;
+            height: 300px;
+            vertical-align:baseline;
+        }
+
+        .box1,
+        .box2,
+        .box3 {
+            /* 根據容器(父元素)大小，調整背景圖片百分比 */
+            background-color: rgb(109, 73, 143);
+            /* background-size: contain; */
+            background-clip: content-box;
+            /* 背景垂直水平置中 */
+            background-position: center center;
+            border-radius: 25px;
+            /* float: left; */
+            
+        }
+        
+        .pic {
+            width: auto;
+            height: auto;
+            padding: 20px;
+            margin: auto;
+            display: block;
+        }
+
+        input:checked+.lab1+.box1 {
+            filter: blur(5px);
+        }
+
+        input:checked+.lab2+.box2 {
+            filter: brightness(200%);
+        }
+
+        input:checked+.lab3+.box3 {
+            filter: contrast(200%);
+        }
+
+        /*把radio用不見，input{display: none;} */
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="radio" name="a" id="i1">
+        <label for="i1" class="lab1">blur(5px)</label>
+        <div class="box1">
+            <div class="pic"><img src="./img/sunny.jpg" alt=""></div>
+        </div>
+        <br>
+        <hr><br>
+        <input type="radio" name="a" id="i2">
+        <label for="i2" class="lab2">brightness(200%)</label>
+        <div class="box2">
+            <div class="pic"><img src="./img/sunny.jpg" alt=""></div>
+        </div>
+        <br>
+        <hr><br>
+        <input type="radio" name="a" id="i3">
+        <label for="i3" class="lab3">contrast(200%)</label>
+        <div class="box3">
+            <div class="pic"><img src="./img/sunny.jpg" alt=""></div>
+        </div>
+        <br>
+        <hr><br>
+    </div>
+</body>
+
+</html>

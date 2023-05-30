@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="post" action="echo.php">
+        China Airline flight number:
+        <!-- CI-[0-9][0-9][0-9] 、\d?(代表0-1) 、\d+(重點寫前面，可以多個數字，至少要一個)-->
+        <input type="text" name="flightNumber" pattern="CI-\d\d\d" value="CI-123"> <br>
+        NID:
+        <input type="text" name="nid" pattern="[A-Z][12]\d{8}" value="B212345678"> <br>
+        EMAIL:
+        <!-- 打-或是.，需要在後面加上一個以上的字元 ，\w+ ([-.]\w+)* @ \w+ ([.]\w+)+ -->
+        <input type="text" name="email" pattern="\w+([-.]\w+)*@\w+([.]\w+)+" required> <br>
+        <input type="submit" name="btnOK" id="btnOK" value="OK">
+    </form>
+</body>
+
+</html>

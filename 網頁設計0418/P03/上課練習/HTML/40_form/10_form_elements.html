@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <!-- 試試看，<select>、<option> -->
+    <label for="phone">選擇手機型號:</label>
+    <select name="phoneName" id="phone">
+        <option value="i13">iPhone13</option>
+        <option value="i14">iPhone14</option>
+        <option value="p5" selected>Pixel 5</option>
+        <option value="p6">Pixel 6</option>
+    </select>
+
+    <br>
+    <!-- 試試看，<select>、<optgroup>、<option> -->
+    <label for="phone2">選擇手機型號:</label>
+    <select name="phoneName2" id="phone2">
+        <optgroup label="Apple">
+            <option value="i13">iPhone13</option>
+            <option value="i14">iPhone14</option>
+        </optgroup>
+        <optgroup label="Google">
+            <option value="p5">Pixel 5</option>
+            <option value="p6">Pixel 6</option>
+        </optgroup>
+    </select>
+
+
+    <br>
+    <!-- 試試看，<datalist>、<option> -->    
+    <label for="food">請輸入喜歡的食物:</label>
+    <input type="text" id="food" list="foodList">
+    <datalist id="foodList">
+        <option value="小籠包">
+        <option value="披薩">
+        <option value="炒麵">
+    </datalist>
+
+</body>
+
+</html>

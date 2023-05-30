@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站-Text</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/text/">https://getbootstrap.com/docs/5.2/utilities/text/</a>
+        </p>
+        <h4>官方網站-Text wrapping and overflow</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/text/#text-wrapping-and-overflow">https://getbootstrap.com/docs/5.2/utilities/text/#text-wrapping-and-overflow</a>
+        </p>
+
+        <hr>
+
+        <!-- 10. 文字位置 -->
+        <!-- 靠左 -->
+        <p class="text-start bg-warning">apple1</p>
+        <!-- 置中 -->
+        <p class="text-center">apple2</p>
+        <!-- 靠右 -->
+        <p class="text-end">apple3</p>
+        <hr><br>
+        因為span是行內元素，依照文字內容長度決定寬度，所以沒辦法對齊
+        <br>
+        <span class="text-end bg-primary">1</span>
+        <span class="text-start">2</span>
+        <span class="text-center">3</span>
+        <br><br><br>
+        <hr>
+        <!-- 15. 在不同的螢幕寬度上，設定不同的對齊方式 -->
+        <p class="text-sm-start">SM</p>
+        <p class="text-md-end">MD(螢幕寬度>=768px，則套用)</p>
+        <p class="text-lg-center">LG</p>
+        <p class="text-xl-start">XL</p>
+        <hr><br>
+        <!-- 20. 當文字溢出時，使用「…」來表達：.text-truncate -->
+        <p class="text-truncate bg-info" style="width: 300px;">apple banana text-truncate1 apple1 apple2 apple3 </p>
+        <p class="text-truncate bg-primary">apple banana text-truncate1 apple1 apple2 apple3 apple4 apple5 apple6 </p>
+        <!-- 30. 文字大小寫 -->
+        <!--     .text-lowercase | .text-uppercase | .text-capitalize -->
+        <hr><br>
+        <!-- 讓所有文字都小寫 -->
+        <p class="text-lowercase">Lowercased text.</p>
+        <!-- 讓所有文字都大寫 -->
+        <p class="text-uppercase">Uppercased text.</p>
+        <!--  -->
+        <!-- 所有單字的第一個字母面大寫 -->
+        <p class="text-capitalize">capiTaliZed text.</p>
+        <br>
+        <hr>
+        <!-- 40. 文字外觀-->
+        <!--     .fs-1 |  .fw-bold  | .fst-italic -->
+        <p class="fs-1">.fs-1 text</p>
+        <p class="fs-2">.fs-2 text</p>
+        <p class="fs-3">.fs-3 text</p>
+        <p class="fs-4">.fs-4 text</p>
+        <p class="fs-5">.fs-5 text</p>
+        <p class="fs-6">.fs-6 text</p>
+        <br><br>
+        <hr>
+        <p class="fw-bold">Bold text.</p>
+        <p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+        <p class="fw-semibold">Semibold weight text.</p>
+        <p class="fw-normal">Normal weight text.</p>
+        <p class="fw-light">Light weight text.</p>
+        <p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+        <p class="fst-italic">Italic text.</p>
+        <p class="fst-normal">Text with normal font style</p>
+
+
+    </div>
+
+</body>
+
+</html>

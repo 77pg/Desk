@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.modal</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h4>官方網站</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/components/modal/#examples">https://getbootstrap.com/docs/5.2/components/modal/#examples</a>
+        </p>
+        <h4>Bootstrap Modal</h4>
+        <p><a
+                href="https://www.w3schools.com/bootstrap5/bootstrap_modal.php">https://www.w3schools.com/bootstrap5/bootstrap_modal.php</a>
+        </p>
+
+        <hr>
+
+        <!-- 10. Modal 類別結構 -->
+        <!--     * 請從官網複製範例 -->
+        <div class="modal" tabindex="-1" id="modal1" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Warning!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>帳號密碼是否存取</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                        <button type="button" class="btn btn-primary">是，存取變更</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 20. 加入一顆按鈕，透過按鈕打開對話框 -->
+        <!--     a. data-bs-toggle="modal" -->
+        <!--     b. data-bs-target="#元素名稱" -->
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal1">登出</button>
+        <!-- 30. 設定無法透過點擊背景就關閉 Model，在modal加上  -->
+        <!--     data-bs-backdrop="static" -->
+
+    </div>
+
+</body>
+
+</html>

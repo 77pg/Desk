@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #400b4f;
+        }
+
+        /* .wrap {
+            width: 530px;
+            overflow: hidden;
+            margin: 0 auto;
+            margin-top: 100px;
+        } */
+
+        .lab {
+            display: block;
+            width: 50px;
+            height: 500px;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            padding-top: 64px;
+            box-sizing: border-box;
+            padding-left: 19px;
+            padding-right: 19px;
+            line-height: 40px;
+            font-weight: bold;
+            background-color: #ff00fe;
+            margin-right: 10px;
+            float: left;
+        }
+
+        .box {
+            display: block;
+            width: 0;
+            height: 500px;
+            float: left;
+            background-color: #a085a7;
+            border-radius: 25px;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .zp {
+            width: 210px;
+            height: 292px;
+            box-sizing: border-box;
+            margin-top: 100px;
+            margin-left: 36px;
+            border: 5px solid #fff;
+        }
+
+        /* .zp img:nth-child(4) {
+            width: 100%;
+            height: 100%;
+            filter: blur();
+        } */
+
+        input:checked+.lab+.box {
+            width: 282px;
+            margin: 0 5px 0 5px;
+        }
+
+        input:checked+.lab {
+            margin: 0;
+            background-color: #ffcc33;
+        }
+
+        input {
+            display: none;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- <div class="wrap"> -->
+    <input type="radio" name="a" id="i1" checked>
+    <label for="i1" class="lab lab1">O N E</label>
+    <div class="box">
+        <div class="zp"><img src="./img/sunny.jpg" alt=""></div>
+    </div>
+    <input type="radio" name="a" id="i2">
+    <label for="i2" class="lab lab2">T O W</label>
+    <div class="box">
+        <div class="zp"><img src="./img/sunny.jpg" alt=""></div>
+    </div>
+    <input type="radio" name="a" id="i3">
+    <label for="i3" class="lab lab3">
+        <Table>T H R E E</Table>
+    </label>
+    <div class="box">
+        <div class="zp"><img src="./img/sunny.jpg" alt=""></div>
+    </div>
+    <!-- <input type="radio" name="a" id="i4">
+    <label for="i4" class="lab lab4">F O U R</label>
+    <div class="box">
+        <div class="zp"><img src="03.jpg" alt=""></div>
+    </div> -->
+    <!-- </div> -->
+
+
+</body>
+
+</html>

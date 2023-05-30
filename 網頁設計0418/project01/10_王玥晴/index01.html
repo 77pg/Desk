@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問卷調查</title>
+</head>
+
+<body>
+    <figure>
+        <figcaption>
+            <img src="map1.jpg" alt style="opacity: 1;width: auto;">
+        </figcaption>
+    </figure>
+    <h2>出國喜好調查</h2>
+    <form>
+        <fieldset>
+            <legend>基本資料</legend>
+            <label>1.您的性別：</label>
+            <input type="radio" name="gender" id="male">
+            <label for="male">生理男</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">生理女</label>
+            <input type="radio" name="gender" id="other_g">
+            <label for="other_g">其他</label>
+            <br><br>
+            <label for="age">2.請問您今年幾歲：</label>
+            <input type="text" name="age" id="age" placeholder="請輸入數字">
+            <br><br>
+            <label for="jobList">3.請問您的職業：</label>
+            <select name="job" id="jobList">
+                <option value="j01">經營/行政/總務</option>
+                <option value="j02">財務/金融/保險</option>
+                <option value="j03">資訊/軟體/系統</option>
+                <option value="j04">教育/學術/研究</option>
+                <option value="j05">餐飲/旅遊/休閒</option>
+                <option value="j06">技術/維修/操作</option>
+                <option value="j07">傳播/娛樂/藝術</option>
+                <option value="j08">物流/運輸/資材</option>
+                <option value="j09">醫療/美容/保健</option>
+                <option value="j10">清潔/家事/保姆</option>
+                <option value="j11">業務/貿易/銷售</option>
+                <option value="j12">農林漁牧業相關</option>
+                <option value="j13">學生</option>
+                <option value="jother">其他</option>
+            </select>
+            <br>
+            <label>4.聯絡方式：</label>
+            <br>
+            <label for="phoneN">電話:</label>
+            
+            <input type="tel" name="phonenum" id="phoneN" placeholder="09-12456789">
+            <br>
+            <label for="uemail">信箱:</label>
+            <input type="email" name="useremail" id="uemail" value="user@gmail.com">
+        </fieldset>
+        <br><br>
+
+        <fieldset>
+            <legend>問卷內容</legend>
+            <label>1.平時對出國旅行的喜好程度</label>
+            <input type="radio" name="likeList" id="vlike">
+            <label for="vlike">非常喜歡</label>
+            <input type="radio" name="likeList" id="like">
+            <label for="like">喜歡</label>
+            <br>
+            <input type="radio" name="likeList" id="normal">
+            <label for="normal">普通</label>
+            <input type="radio" name="likeList" id="unlike">
+            <label for="unlike">不喜歡</label>
+            <input type="radio" name="likeList" id="dnlike">
+            <label for="dnlike">非常不喜歡</label>
+            <br><br>
+
+            <label>2.目前出國旅行次數有幾次呢?</label>
+            <input type="radio" name="timesList" id="none">
+            <label for="none">沒有出國過</label>
+            <input type="radio" name="timesList" id="fdown">
+            <label for="fdown">5次以下</label>
+            <br>
+            <input type="radio" name="timesList" id="f510">
+            <label for="f510">5-10次</label>
+            <input type="radio" name="timesList" id="f1015">
+            <label for="f1015">10-15次</label>
+            <input type="radio" name="timesList" id="f20up">
+            <label for="f20up">20次以上</label>
+            <br><br>
+
+            <label>3.您出國旅行偏好搭乘什麼交通工具?</label>
+            <input type="checkbox" name="ways" id="train" checked>
+            <label for="train">火車</label>
+            <input type="checkbox" name="ways" id="subway">
+            <label for="subway">地鐵</label>
+            <input type="checkbox" name="ways" id="airplane">
+            <label for="airplane">國內飛機</label>
+            <input type="checkbox" name="ways" id="drive_bs">
+            <label for="drive_bs">自駕</label>
+            <input type="checkbox" name="ways" id="other_way">
+            <label for="other_way">其他</label>
+            <br><br>
+
+            <label for="country">4.最喜歡或最想去哪個國家?</label>
+            <input type="text" name="Countries" id="country">
+            <br><br>
+
+            <label>5.到了當地想體驗哪些事呢?</label>
+            <br>
+            <span>
+                <img src="./action.jpg" alt="民俗活動" style="width: 50%;">
+                <br>
+                <input type="checkbox" name="m_action" id="action">
+                <label for="action">體驗民俗活動</label>
+                <br>
+
+                <img src="./place.jpg" alt="view" style="width: 50%;">
+                <br>
+                <input type="checkbox" name="v1" id="view1">
+                <label for="view1">必去的知名景點</label>
+                <br>
+
+                <img src="./jump.jpg" alt="高空彈跳" style="width: 50%;">
+                <br>
+                <input type="checkbox" name="h_jump" id="jump">
+                <label for="jump">挑戰未知的新事物</label>
+                <br><br>
+
+                <input type="checkbox" name="otherp_c" id="otherp_check">
+                <label for="otherp_check">其他</label>
+                <input type="otherp_w" name="oplace" id="otherp_write">
+            </span>
+            <br>
+        </fieldset>
+
+        <br><br>
+        
+
+    </form>
+    <button onclick="showMsg()">確認送出</button>
+    <script>
+        function showMsg(){
+            alert("結束填寫!")
+        }
+    </script>
+</body>
+
+</html>

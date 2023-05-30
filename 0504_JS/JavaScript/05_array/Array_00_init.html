@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Array</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+    <input type="button" id="test" value="click me to test your code" />
+    <div id="report"></div>
+
+<script>
+
+test.onclick = function () {
+    // 如何建立/初始化陣列
+    // -------------------
+    // 參考資料: 
+    // https://www.w3schools.com/js/js_arrays.asp
+    // 
+    // 任務: 
+    // 請建立一個陣列，內容依序為: 3, 0, 1, 8, 7, 2, 5, 4, 9, 6
+    var dataList=[3, 0, 1, 8, 7, 2, 5, 4, 9, 6];
+    dataList[4]=100;
+    // push在陣列的結尾處加上
+    dataList[dataList.length]=88;
+    dataList[dataList.length]=99;
+    dataList.push(102);
+    
+    report.innerText=dataList.join(' | ');
+
+
+
+}  // end of test.onclick
+
+</script>
+
+</body>
+</html>

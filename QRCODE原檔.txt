@@ -1,0 +1,58 @@
+<div class="max1136 mx-auto">
+            <div class="row">
+                <!--  style="position: relative;top: 250px;height:250px;" -->
+                <div class="col-9 col-md-9 col lg-10 bg-light">
+                    <!-- style="margin-top: 250px;" -->
+                    <div class="row">
+                        <span class="fs-24">
+                            <a href="https://www.google.com" id="web_abouts" aria-label="關於我們" target="_blank"
+                                class="text-black">關於我們</a>&nbsp;
+                            <div class="vr"></div>&nbsp;
+                            <a href="https://www.youtube.com" aria-label="前往官網" id="web_miracle" class="text-black"
+                                target="_blank">前往官網</a>&nbsp;
+                            <div class="vr"></div>&nbsp;
+
+                            免費諮詢電話：
+                            <a href="tel:+886-123-456-789" class="ms-3 ms-lg-0 ms-xl-3 d-inline d-lg-block d-xl-inline"
+                                id="tel" aria-label="0123-456-789">
+                                0123-456-789
+                            </a>
+                        </span>
+                        <!-- <ul class="fs-14 mb-0" style="list-style-type: none;">
+                            <li>
+                                <a href="https://www.google.com" id="web_abouts" aria-label="關於我們"
+                                    target="_blank">關於我們</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com" id="web_miracle" aria-label="前往官網"
+                                    target="_blank">前往官網</a>
+                            </li>
+                        </ul>-->
+                    </div>
+                    <div>
+                        <span class="d-block fs-24 mb-3"></span>
+                        <span class="fs-13">@ 2023 &nbsp;小專題製作 &nbsp;網頁設計</span>
+                        <span>&nbsp; | &nbsp;作者：王玥晴 &nbsp;|&nbsp; 導師：王偉璁</span>
+                    </div>
+                </div>
+                <div class="col-3 col-md-3 col-lg-2 d-none d-md-block bg-light">
+                    <div class="line_box ms-auto">
+                        <a href="https://line.me/ti/p/uGIHgmN_cg" class="text-white text-center d-block"
+                            aria-label="LINE立即加好友" target="_blank">
+                            <img src="../img/Line_icon.jpg" alt="LINE" class="d-table mx-auto"
+                                style="width:85%;height:auto;box-sizing: border-box;">
+                            <span class="text-center">立即加好友</span>
+                        </a>
+                        <div class="QRbox bg bg-white pt-2 pb-2 text-center" data-id="@77isme"
+                            onclick="copyToClipboard('copylineTarget',this)">
+                            <span class="copylineTarget" href="javascript:void(0)" style="display: none;">@77isme</span>
+                            <img class="d-table mx-auto mb-1" src="../img/Line.jpg" alt="QRCODE">
+                            <span>
+                                <span>@77isme</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>

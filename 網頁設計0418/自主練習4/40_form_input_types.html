@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <!-- 參照 40_form_input_types_完成圖.png 製作一份表單 -->
+
+    <!-- step1: 標題 -->
+    <!-- step2: 加入一個表單 <form> -->
+    <!-- step3. 在<form>表單內 加入 <fieldset> 群組標籤 和 <legend> 並給予說明 -->
+    <!-- step4. 在表單 <form> 內加入 姓名 <label> 和輸入欄位 <input type="text"> -->
+    <!-- step5. 在表單 <form> 內加入 電話 <label> 和輸入欄位 <input type="tel"> -->    
+    <!-- step6. 加入 職業 和 <input type="radio"> -->
+
+    <!-- step7. 加入 年紀 和 <input type="radio">、 
+                    交通工具 和 <input type="checkbox"> ，步驟和 step6. 類似 -->
+    <h2>通勤工具使用調查</h2>
+    <form>
+        <fieldset>
+            <legend>基本資料</legend>
+            <label for="userName">姓名:</label>
+            <input type="text" id="userName">
+            <br>
+            <label for="userPhone">電話:</label>
+            <input type="tel" id="userPhone">
+        </fieldset>
+        職業:
+        <input type="radio" name="job" id="std">
+        <label for="std">學生</label>
+        <input type="radio" name="job" id="teacher">
+        <label for="teacher">老師</label>
+        <input type="radio" name="job" id="other1">
+        <label for="other1">其他</label>
+        <br>
+        年紀:
+        <input type="radio" name="age" id="young">
+        <label for="young">20-30</label>
+        <input type="radio" name="age" id="thirty">
+        <label for="thirty">30-40</label>
+        <input type="radio" name="age" id="fifty">
+        <label for="fifty">40-50</label>
+        <input type="radio" name="age" id="fifty_up">
+        <label for="fifty_up">50以上</label>
+        <br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br>
+        交通工具:
+        <input type="checkbox" name="Trans" id="bicycle">
+        <label for="bicycle">腳踏車</label>
+        <input type="checkbox" name="Trans" id="motor">
+        <label for="motor">機車</label>
+        <input type="checkbox" name="Trans" id="ship">
+        <label for="ship">船</label>
+        <input type="checkbox" name="Trans" id="other2">
+        <label for="other2">其他</label>
+        <br>
+        <a href="#userName">name</a>
+        <br>
+        <table>
+            <th>head</th>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+            </tr>
+            <tr>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

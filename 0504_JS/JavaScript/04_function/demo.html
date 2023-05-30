@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function show(count, what = "^") {
+            let res = "";
+            if (count > 0) {
+                if (count > 20) {
+                    alert("show太大，超過20!");
+                }
+                else {
+                    for (let i = 1; i <= count; i++) {
+                        res += what;
+                    }
+                    alert(res);
+                }
+            }
+            else {
+                alert("show為負!")
+            }
+
+        }
+        // 三秒後再顯示
+        // setTimeout(show,3000);
+
+        show(20, "*");
+
+        function add(x, y) {
+            return;
+            var result = 0;
+            result = x + y;
+            return result;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <!-- 參照 30_form_input_types_完成圖.png 製作一份表單，輸入欄位為必填 -->
+    <!-- placeholder提示字，required必填欄位，
+        type的email會驗證是否為正確的EMAIL，
+        type的password密碼去識別化 -->
+    <h2>會員註冊</h2>
+    <form>
+        <fieldset>
+            <legend>基本資料</legend>            
+            <label for="u_name">姓名:</label>
+            <input type="text" id="u_name" 
+            placeholder="請輸入中文名字">
+            <br>
+            <label for="u_email">email:</label>
+            <input type="email" id="u_email" required 
+            value="user@gmail.com">
+            <br>
+            <label for="u_password">密碼:</label>
+            <input type="password" id="u_password">           
+        </fieldset>
+        <br>
+        <input type="checkbox" name="news" id="sub" checked>
+        <label for="sub">訂閱最新資訊</label>
+        <input type="checkbox" name="agree" id="y" checked>
+        <label for="y">同意使用這條款</label>
+    </form>
+
+
+</body>
+
+</html>

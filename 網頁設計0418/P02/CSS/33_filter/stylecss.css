@@ -1,0 +1,76 @@
+* {/* 邊界、留白重設0 */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* 寬度為視窗的100% */
+    width: 100%;
+    min-width: 600px;
+    max-width: 960px;
+    background-color: bisque;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    background-color: lightgray;
+}
+#one{
+    width: 32%;
+    height: 300px;
+    background-color: lightcoral;
+    margin-right: 2%;
+    float: left;
+}
+#two{
+    width: 32%;
+    height: 300px;
+    background-color: lightblue;
+    margin-right: 2%;
+    float: left;
+}
+#three{
+    width: 32%;
+    height: 300px;
+    background-color: orange;
+    float: right;
+}
+footer {
+    width: 100%;
+    background-color: lightgray;
+    /* 解除頁尾文繞圖 */
+    clear: both;
+}
+/* input */
+img{
+    width: 300px;
+}
+.box1,.box2,.box3{
+    /* 根據容器(父元素)大小，調整背景圖片百分比 */
+    background-size: cover;
+    /* background-color: #a085a7; */
+    background-clip: border-box;
+    /* 背景垂直水平置中 */
+    background-position: center center;
+    border-radius: 25px;
+    /* 變化讓它互動慢0.5秒 */
+    transition: 0.5s;
+}
+.pic{
+    /* max-width: 25%; */
+    width: auto;
+    height: auto;
+    margin: auto;
+    /* padding: 20px; */
+    /* position: center center; */
+}
+input:checked+.lab1+.box1{
+    filter: blur(5px);
+}
+input:checked+.lab2+.box2{
+    filter: brightness(200%);
+}
+input:checked+.lab3+.box3{
+    filter: contrast(200%);
+}

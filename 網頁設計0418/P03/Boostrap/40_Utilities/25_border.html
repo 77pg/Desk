@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+
+    <style>
+        .box {
+            height: 10vh;
+        }
+
+        .box>div {
+            display: inline-block;
+        }
+
+        div[class*='rounded'] {
+            width: 150px;
+        }
+
+
+        div>span {
+            height: 50px;
+            width: 50px;
+            /* 改變行內元素 */
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/borders/">https://getbootstrap.com/docs/5.2/utilities/borders/</a>
+        </p>
+        <h4>Borders</h4>
+        <p><a
+                href="https://www.w3schools.com/bootstrap5/tryit.asp?filename=trybs_util_borders&stacked=h">https://www.w3schools.com/bootstrap5/tryit.asp?filename=trybs_util_borders&stacked=h</a>
+        </p>
+
+        <hr>
+
+        <!-- 10. 為什麼這樣設定div不會出現? -->
+        <div class="w-25 h-100 bg-success">w-25 h-100 bg-success</div>
+        <br>
+        <hr><br>
+        <!-- 20. 複製貼上官網的範例，為什麼 border 測試不出來 -->
+
+        <span class="border"></span>
+        <span class="border-top"></span>
+        <span class="border-end"></span>
+        <span class="border-bottom"></span>
+        <span class="border-start"></span>
+
+        <br>
+        <hr><br>
+        <div>
+            <span class="border"></span>
+            <span class="border-top"></span>
+            <span class="border-end"></span>
+            <span class="border-bottom"></span>
+            <span class="border-start"></span>
+        </div>
+
+        <!-- 21. 設定不同的邊線顏色 -->
+        <span class="border border-primary">123</span>
+        <!-- 23. 調整 border 的寬度： border-N -->
+        <br><hr><br>
+        <span class="border border-1">123</span>
+        <span class="border border-2">123</span>
+        <span class="border border-3">123</span>
+        <span class="border border-4">123</span>
+        <span class="border border-5">123</span>
+
+        <!-- 25. 設定邊框圓角 -->
+        <!--     .rounded-top    | rounded-bottom  -->
+        <!--     .rounded-start  | rounded-end     -->
+        <!--     .rounded-circle | .rounded-pill   -->
+        <br><hr><br>
+        <span class="border rounded-top">123</span>
+        <span class="border rounded-start">123</span>
+        <span class="border rounded-circle">123</span>
+        <span class="border rounded-bottom">123</span>
+        <span class="border rounded-end">123</span>
+        <span class="border rounded-pill">123</span>
+        
+        <br><hr><br>
+        <div class="box">
+            <div class="rounded-top h-100 bg-info"></div>
+            <div class="rounded-start h-100 bg-info"></div>
+            <div class="rounded-circle h-100 bg-info"></div>
+            <div class="rounded-bottom h-100 bg-info"></div>
+            <div class="rounded-end h-100 bg-info"></div>
+            <div class="rounded-pill h-100 bg-info"></div>
+
+        </div>
+        
+        <br><br><hr><br>
+
+    </div>
+
+</body>
+
+</html>

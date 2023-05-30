@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>val()</title>
+
+    <style>
+        /* 1. 在 html 中設定 --apple: green;  
+                觀察畫面的變化*/
+        html {
+            --apple: green;
+        }
+
+        /* 2. 取得在 html 中設定的變數值 */
+        /*    選擇 h5 標籤 設定 color: var(--apple); 觀察畫面的變化 */
+        h5 {
+            color: var(--apple);
+        }
+
+        /* 實驗 */
+        h4 {
+            /* 在這裡宣告變數 */
+            --cat: orange;
+
+            /* 這樣可以成功 */
+            color: var(--cat);
+        }
+
+        h6 {
+            /* 在這裡使用 h4 宣告的變數 */
+            /* 設定會失敗 */
+            color: var(--cat);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h4>在 CSS 中使用變數</h4>
+    <p> a. 使用 -- 宣告</p>
+    <p> b. 透過 var function 取得變數值</p>
+    <hr>
+    <h4> h4 測試顏色設定 </h4>
+    <h5> h5 測試顏色設定 </h5>
+    <h6> h6 測試顏色設定 </h6>
+
+</body>
+
+</html>

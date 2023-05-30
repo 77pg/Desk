@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+    <div id="debug"></div>
+    <script>
+        var lastNumber=0;
+        function otherFunction(){
+            lastNumber=Math.floor(Math.random()*10000);
+        }
+        
+        var nextNumber = (function () {
+            var lastNumber = 0;
+            return function() {
+                lastNumber++;
+                return lastNumber;
+            }
+        })();
+    
+        var number = 0;
+        number = nextNumber();
+        number = nextNumber();
+        number = nextNumber();
+
+        debug.innerText = number;
+    </script>
+</body>
+</html>

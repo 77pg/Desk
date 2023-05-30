@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="./img/catttttt (1).jpg" rel="icon" type="jpg">
+    <title>關於FL愛寵</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./test3.css">
+</head>
+<div class="container p-5 my-5 border text-center">
+  <h1>分享寵物平台</h1>
+  <form id="petForm">
+    <div class="form-group">
+      <label for="petName">寵物名稱</label>
+      <input type="text" class="form-control" id="petName" required>
+    </div>
+    <div class="form-group">
+      <label for="petType">寵物種類</label>
+      <select class="form-control" id="petType" required>
+        <option value="">請選擇寵物種類</option>
+        <option value="狗">狗</option>
+        <option value="貓">貓</option>
+        <option value="鳥類">鳥類</option>
+        <option value="兔子">兔子</option>
+        <option value="小型哺乳動物">小型哺乳動物</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="petAge">寵物年齡</label>
+      <input type="number" class="form-control" id="petAge" min="1" max="20" value="1" required>
+    </div>
+    <div class="form-group">
+      <label for="petDescription">寵物描述</label>
+      <textarea class="form-control" id="petDescription" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">新增</button>
+    <button type="button" class="btn btn-secondary" id="editButton" disabled>編輯</button>
+    <button type="button" class="btn btn-danger" id="deleteButton" disabled>刪除</button>
+  </form>
+
+  <div id="petList">
+    <h2>新增的寵物種類</h2>
+    <ul id="petTypeList"></ul>
+    <h2>寵物詳細資料</h2>
+    <div id="petDetails"></div>
+  </div>
+</div>
+
+<script>
+  var petTypeList = []; // 儲存新增的寵物種類
+
+  document.getElementById('petForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // 防止表單提交後重新載入頁面
+
+    // 獲取表單欄位的值
+    var petName = document.getElementById('petName').value;
+    var petType = document.getElementById('petType').value;
+    var petAge = document.getElementById('petAge').value;
+    var petDescription = document.getElementById('petDescription').value;
+
+    // 將新增的寵物種類加入列表
+    if (!petTypeList.includes(petType)) {
+      petTypeList.push(petType);
+      var petTypeListElement = document.getElementById('petTypeList');
+      var li = document.createElement('li');
+      li.textContent = petType;
+      petTypeListElement.appendChild(li);
+    }
+
+    // 顯示寵物詳細資料
+    var petDetailsElement = document.getElementById('petDetails');
+    petDetailsElement.innerHTML = '<h3>名稱：' + petName + '</h3>' +
+      '<h3>種類：' + petType + '</h3>' +
+      '<h3>年齡：' + petAge + ' 歲</h3>' +
+      '<h3>描述：' + petDescription + '</h3>';
+
+    // 啟用編輯和刪除按鈕
+    var editButton = document.getElementById('editButton');
+    var deleteButton = document.getElementById('deleteButton');
+    editButton.disabled = false;
+    deleteButton.disabled = false;
+
+    // 清空表單欄位的值
+    document.getElementById('petName').value = '';
+    document.getElementById('petType').value = '';
+    document.getElementById('petAge').value = '1';
+    document.getElementById('petDescription').value = '';
+
+    // 可以在此處添加額外的處理邏輯或顯示成功訊息
+    alert('寵物資料已新增成功！');
+  });
+
+  document.getElementById('editButton').addEventListener('click', function() {
+    // 在此處理編輯寵物資料的邏輯
+    alert('執行編輯操作');
+  });
+
+  document.getElementById('deleteButton').addEventListener('click', function() {
+    // 在此處理刪除寵物資料的邏輯
+    alert('執行刪除操作');
+  });
+</script>

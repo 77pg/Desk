@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>calc()</title>
+
+    <style>
+        div {
+            height: 100px;
+            background-color: lightcoral;
+        }
+
+        /* 1. 定義寬度為 500px; */
+        .demo1 {
+            width: 500px;
+        }
+        
+
+        /* 2. 透過 calc() 計算出寬度 (相同單位) */
+        .demo2 {
+            width: calc(100px + 400px);
+        }
+        
+
+        /* 3. 透過 calc() 計算出寬度 (不同單位也OK)*/
+        .demo3 {
+            width: calc(100% - 200px);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h3>calc function 接受一個四則運算式，並回傳運算後的結果</h3>
+    <hr>
+    <div class="demo1"></div>
+    <hr>
+    <div class="demo2"></div>
+    <hr>
+    <div class="demo3"></div>
+    
+</body>
+
+</html>

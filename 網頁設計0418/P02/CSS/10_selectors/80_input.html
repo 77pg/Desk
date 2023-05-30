@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 01. 改變滑鼠經過 radio 的樣式 ，變成一隻小手*/
+        input[type="radio"] {
+            cursor: pointer;
+        }
+
+        /* 02-01. :valid EMAIL驗證通過時的樣式設定 */
+        input[type="email"]:valid,
+        input[type="text"]:valid,
+        input[type="tel"]:valid {
+            background-color: lightgreen;
+        }
+
+        /* 02-02. :invalid 驗證不通過時的樣式設定 */
+        input[type="email"]:invalid,
+        input[type="text"]:invalid,
+        input[type="tel"]:invalid {
+            background-color: lightpink;
+        }
+
+        /* 03-01. 驗證通過時 輸入框後面顯示 ✓ */
+        input[type="email"]:valid+span::before {
+            content: "✓";
+            color: green;
+        }
+
+        /* 03-02. 驗證不通過時 輸入框後面顯示 ✖ */
+        input[type="email"]:invalid+span::after {
+            content: "✖";
+            color: red;
+        }
+
+        /* 04-01. 設定取得焦點的背景顏色greenyellow */
+
+        #t1:focus{
+            background-color: greenyellow;
+        }
+
+        /* 04-02. 設定勾選時 label 顏色 blue */
+        input[type="checkbox"]:checked+label{
+            color: blue;
+        }
+        /* 勾選後會在文字上畫線 */
+        #c1:checked+label{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <!-- 照上方CSS設定 -->
+        <!-- 01. 產生 單選按鈕元素 -->
+        <input type="radio">
+        <hr>
+        使用虛擬類別、虛擬元素，驗證input屬性是否通過
+        <br><br>
+        <!-- 02. 產生 可以輸入 email 的方框 以及 -->
+        <label>輸入email:</label>
+        <input type="email">
+        <span></span>
+        <br>
+        <!--     產生 可以輸入 文字  的方框，並限制只能輸入大寫英文 以及 -->
+        <!--     產生 可以輸入 電話  的方框，並限制為台灣手機號碼格式 以及 -->
+        <!--     產生 可以輸入 文字  的方框，並限制輸入身分證字號格式 -->
+        <label>輸入大寫英文:</label>
+        <input type="text" pattern="[A-Z]{3,5}">
+        <!-- pattern="[A-Z a-z]{0,}，無論大小寫或者沒有打字都是驗證正確 -->
+        <br>
+
+        <label>輸入台灣手機號碼:</label>
+        <input type="tel" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="0912-345-678">
+        <br>
+
+        <label>輸入身分證字號:</label>
+        <input type="text" pattern="[A-Z]{1}[0-9]{9}" placeholder="A123456789">
+        <br><br><hr>
+        點選文字框，背景顏色會變
+        <input type="text" id="t1">
+        <br><br>
+        被勾選，字會變成藍色
+        <input type="checkbox" id="c1">
+        <label for="c1">PickMe</label>
+    </form>
+</body>
+
+</html>

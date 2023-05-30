@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <!-- <img> 透過 src 屬性 設定圖片 -->
+    <!-- img => image -->
+    <!-- src => source -->
+
+    <!-- 01. 相對路徑 -->
+
+    <!-- 01-01. 圖片跟文件在同一層目錄 -->
+    <!-- 試試看，設定 puppy.jpg-->
+    <!-- <img src="./puppy.jpg"> -->
+
+
+    <!-- 01-02. 圖片在下一層目錄 -->
+    <!-- 試試看，設定 media/beagle.jpg、
+                     ./media/beagle.jpg -->
+    <!-- <img src="./media/beagle.jpg"> -->
+
+    <!-- 01-03. 圖片在上一層目錄 -->
+    <!-- 試試看，設定 ../10_HTML5/img/kitty.jpg-->
+    <!-- <img src="../10_HTML5/img/kitty.jpg"> -->
+
+    <!-- 02. 絕對路徑 -->
+    <!-- 試試看，設定 C:\\kitty.jpg-->
+    <!-- K.P.: 點兩下直接開啟 .html 檔案 vs 透過 live server
+               觀察網址: file://  vs  live server: http:// -->
+    <!-- <img src="C:\\kitty.jpg"> -->
+
+    <!-- 03. 根目錄 -->
+    <!-- 試試看，設定 /puppy.jpg -->
+    <!-- <img src="/puppy.jpg"> -->
+
+
+    <!-- alt 屬性: 替代文字-->
+    <!-- <img src="beagle.jpg" alt="米格魯"> -->
+
+
+    <!-- height, width 屬性 -->
+    <!-- 01. 設定像素 width="50" -->
+    <!-- <img src="./puppy.jpg" width="100"> -->
+
+    <!-- 試試看，同時設定 width, height 和 只設定 width 或 height 的差異-->
+    <!-- K.P.: 只設定 width 或 height，另一個值會依照等比例縮放-->
+    <!-- <img src="./puppy.jpg" 
+         width="100"
+         height="300"> -->
+
+    <!-- 02. style="width:50%;" -->
+    <!-- <img src="./puppy.jpg"
+         style="width: 50%"> -->
+
+    <!-- 測試 => style="height: 50%;" -->
+    <div style="height: 500px; background-color: lightblue;">
+        <img src="./puppy.jpg" 
+             style="height: 50%;">
+    </div>
+
+</body>
+
+</html>

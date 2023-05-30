@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>picture</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+    <style>
+        /* @media screen and (min-width:400px) and (max-width:768px) {
+            .i2 {}
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/content/images/#picture">https://getbootstrap.com/docs/5.2/content/images/#picture</a>
+        </p>
+        <hr>
+
+        <!-- 10. 在不同的裝置螢幕下，載入不同的圖片-->
+        <!--    a. 先製作大中小不同尺寸的素材 -->
+        <!--        https://dummyimage.com/ -->
+
+        <!-- <img class="i2" src="https://dummyimage.com/1200x800/de85cb/ede9ca&text=Two" alt="two">
+        <img class="i3" src="https://dummyimage.com/800x600/ed591a/000000&text=three" alt="three"> -->
+        <!--    b. 再透過 <picture> <source srcset="" media=""> <img src=""> 等 tag 實現 -->
+        <picture>
+            <source media="(min-width:1000px)" srcset="../_image/two.webp">
+            <source media="(min-width:700px)" srcset="../_image/three.webp">
+            <img class="i1" src="../_image/one.webp" alt="one" style="width:auto;">
+        </picture>
+    </div>
+
+</body>
+
+</html>

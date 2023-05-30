@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#btnTry").click(function () {
+        // 在這裏寫程式
+
+        
+        // <br>不會換行，當成文字
+        // $("#report").text("line1<br>Line2");
+
+        // var s = $("#report").text();
+        // alert(s);
+
+        // <br>會換行，當成網頁
+        // $("#report").html("line1<br>Line2");
+
+        // 新增append
+        // $("#report").append("<br>line1<br>Line2");
+
+        // 讀取Text輸入的值，並回傳
+        // Property 會反映目前狀態。.prop(name屬性值, value)
+        // var s = $("#aTextField").prop("value");
+        // $("#report").append(s+"<br>");
+        // $("#report").append("<li>"+s+"<br>");
+        
+        
+        // 更改預設值為"Hello!"
+        // var s = $("#aTextField").prop("value", "Hello!");
+        // $("#report").append(s+"<br>");
+
+        // 選取radio C，attr預設為checked，無論後面回傳值是多少，都不會改變
+        // Attribute 永遠都是呈現初始值
+        // 使用.removeAttr() 移除attr屬性，.attr(name,value);
+        // prop較穩定
+        // var s = $("input[name='radioGroup']").eq(2).prop("checked","checked");
+        // var s = $("input[name='radioGroup']:eq(2)").prop("checked","checked");
+        // gt(greater)為大於、lt小於、first第一個、last最後
+        var s = $("input[name='checkboxes']:gt(0)").attr("checked","checked");
+        $("#report").append("checkbox 234 selected");
+
+
+
+      })
+    });
+
+  </script>
+</head>
+
+<body>
+
+
+  <div id="report">Report:<br></div>
+
+  <hr>
+
+  <form action="" method="put" onsubmit="return false;">
+    <div>
+      <label>Text:</label> <input type="text" id="aTextField" name="someTextField" />
+    </div>
+    <div>
+      <label>Radio group:</label>
+      <input type="radio" name="radioGroup" id="radioA" value="65" /> A
+      <input type="radio" name="radioGroup" id="radioB" value="66" checked="checked" /> B
+      <input type="radio" name="radioGroup" id="radioC" value="67" /> C
+    </div>
+    <div>
+      <label>Checkboxes:</label>
+      <input type="checkbox" name="checkboxes" id="checkbox1" value="1" /> 1
+      <input type="checkbox" name="checkboxes" id="checkbox2" value="2" /> 2
+      <input type="checkbox" name="checkboxes" id="checkbox3" value="3"/> 3<!-- checked="checked"  -->
+      <input type="checkbox" name="checkboxes" id="checkbox4" value="4" /> 4
+    </div>
+    <button type="button" id="btnTry">Try</button>
+  </form>
+</body>
+
+</html>

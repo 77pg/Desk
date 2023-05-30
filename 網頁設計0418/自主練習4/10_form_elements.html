@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <!-- 試試看，<select>、<option>裡面內容 -->
+    <!-- label for 連結select id，讓user碰到文字重點在select上 -->
+    <label for="phone">選擇手機型號:</label>
+    <form>
+        <select name="phoneName" id="phone">
+            <option value="i13">iphone13</option>
+            <option value="i11">iphone11</option>
+            <option value="p5" selected>Pixel 5</option>
+            <option value="i10">iphoneXR</option>
+            <option value="i8">iphone8</option>
+        </select>
+    </form>
+    <br>
+    <!-- 試試看，<select>、<optgroup>、<option> -->
+    <label for="phone2">選擇手機型號:</label>
+    <select name="phoneName2" id="phone2">
+        <optgroup label="蘋果">
+            <!-- option value是給伺服器端看的 -->
+            <option value="i13">iphone13</option>
+            <option value="i11">iphone11</option>
+            <option value="i10" selected>iphoneXR</option>
+        </optgroup>
+        <optgroup label="Google">
+            <option value="p6">Pixel 6</option>
+            <option value="p5">Pixel 5</option>
+        </optgroup>
+    </select>
+    <hr>
+    <!-- 試試看，<datalist>、<option> -->
+        <!-- 點選label for可以焦點在Input id -->
+    <label for="foodipt">Favorite food：</label>
+        <!-- Input list連結datalist的id，才能把value值放到input --> 
+    <input type="text" id="foodipt" list="foodlist">
+    <datalist id="foodlist">
+        <!-- option沒有結束標籤，value是給user看的 -->
+        <option value="小籠包">
+        <option value="蛋塔">
+        <option value="炸雞">
+    </datalist>
+    </select>
+    
+
+</body>
+
+</html>

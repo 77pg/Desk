@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="../CSS/head.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: "Noto Sans TC", sans-serif;
+        }
+
+        header {
+            width: 100%;
+            background-color: cornsilk;
+            color: brown;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .header-search {
+            display: flex;
+        }
+
+        .header-search button,
+        .header-search input {
+            border: none;
+            background-color: #fff;
+            padding: 5px 10px;
+        }
+
+        .header-search button {
+            border-radius: 0 200px 200px 0;
+        }
+
+        .header-search input {
+            border-radius: 200px 0 0 200px;
+        }
+
+        /* logo外容器大小 */
+        .logo {
+            width: 100px;
+        }
+
+        /* 消除溢出的圖片 */
+        .logo img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        nav {
+            width: 100%;
+            background-color: rgb(236, 220, 255);
+            color: brown;
+            margin: auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 5px 1em;
+        }
+
+        main {
+            text-align: center;
+            width: 70%;
+            height: 300px;
+            float: left;
+            background-color: rgb(220, 228, 255);
+            color: brown;
+        }
+
+        aside {
+            text-align: right;
+            width: 30%;
+            height: 300px;
+            float: right;
+            background-color: rgb(220, 253, 255);
+            color: brown;
+        }
+
+        footer {
+            width: 100%;
+            background-color: rgb(255, 231, 220);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="../img/狗碗.jpg" alt="">
+            </a>
+            導覽列
+            <!-- class="navbar navbar-expand-lg bg-light fixed-top shadow"-->
+            <nav>
+                <!-- <div class="container-fluid"> -->
+                <!-- </div> -->
+                <a href="#">總柴吃什麼</a>
+                <a href="#">總柴去哪玩</a>
+                <a href="#">總柴學切版</a>
+                <a href="#">總柴的廢話</a>
+            </nav>
+            <form class="header-search">
+                <input type="search" name="" id="" />
+                <button><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+    <main>main</main>
+    <aside>aside</aside>
+
+    <!-- 頁尾 -->
+    <footer style="position: relative; top: 70px;">
+        <div class="max1136 mx-auto">
+            <div class="row footer_container add01">
+                <div class="col-12 col-md-9 col-lg-10">
+                    <div class="row">
+                        <span class="fs-24">
+                            免費諮詢電話：
+                            <a href="tel:+886-123-456-789" class="ms-3 ms-lg-0 ms-xl-3 d-inline d-lg-block d-xl-inline"
+                                aria-label="0123-456-789">
+                                0123-456-789
+                            </a>
+                        </span>
+                        <ul class="fs-14 mb-0" style="list-style-type: none;">
+                            <li>
+                                <a href="https://www.google.com" id="web_abouts" aria-label="關於我們"
+                                    target="_blank">關於我們</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com" id="web_miracle" aria-label="前往官網"
+                                    target="_blank">前往官網</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 col-md-9 col-lg-10 d-block">
+                        <span class="d-block fs-24 mb-3"></span>
+                        <span class="fs-13">@ 2023 &nbsp;小專題製作 &nbsp;網頁設計</span>
+                        <span>&nbsp; | &nbsp;作者：王玥晴 &nbsp;|&nbsp; 導師：王偉璁</span>
+                    </div>
+                </div>
+                <div class="col-3 col-lg-2 footer_block2 d-none d-md-block">
+                    <div class="line_box fs-13 ms-auto">
+                        <a href="https://line.me/ti/p/uGIHgmN_cg" class="text-white text-center d-block"
+                            aria-label="LINE立即加好友" target="_blank">
+                            <img src="../img/Line_icon.jpg" alt="LINE" class="d-table mx-auto"
+                                style="width:85%;height:auto;box-sizing: border-box;">
+                            <span class="text-center">立即加好友</span>
+                        </a>
+                        <div class="QRbox bg bg-white pt-2 pb-2 text-center" data-id="@77isme"
+                            onclick="copyToClipboard('copylineTarget',this)">
+                            <span class="copylineTarget" href="javascript:void(0)" style="display: none;">@77isme</span>
+                            <img class="d-table mx-auto mb-1" src="../img/Line.jpg" alt="QRCODE">
+                            <span>
+                                <span>@77isme</span>
+                                <span class="text-blue ms-2">複製</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    hello
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

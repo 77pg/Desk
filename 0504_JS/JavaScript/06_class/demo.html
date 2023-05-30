@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="debug"></div>
+
+    <script>
+        var playerList = [
+            { firstName: "Jermy", lastName: "Lin" },
+            { firstName: "Derek", lastName: "Jeter" },
+            { firstName: "Lion", lastName: "Messi" },
+        ];
+
+        var x=JSON.stringify(playerList);
+        debug.innerHTML=x;
+
+        // var s = '[{"firstName":"Derek","lastName":"Jeter"},{"firstName":"Jeremy","lastName":"Lin"},{"firstName":"Lionel","lastName":"Messi"}]';
+        // var objArray = JSON.parse(s);
+        // debug.innerHTML = objArray[2].lastName + "<br>";
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        /* 先開啟網頁觀察畫面 */
+
+        /* ::before 在元素前面加上內容 */
+        #demo1::before{
+            content: "強檔電影!";
+            font-size: large;
+            color: cadetblue;
+        }
+
+        /* ::after 在元素後面加上內容 */
+        #demo1::after{
+            content: "...現正熱映中";
+            color: lightcoral;
+        }
+        #demo2::before{
+            content: "票行排名第一";
+            background-color: red;
+        }
+        #demo2::after{
+            content: "...了解更多";
+            font-size: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p id="demo1">奇異博士</p>
+    <p id="demo2">復仇者聯盟</p>
+</body>
+
+</html>

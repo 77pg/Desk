@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+    <style>
+        div>div{
+            width: 100px;
+            height: 100px;
+        }
+        .box{
+            background-color: lightcoral;
+
+            /* 20. 外層容器加入 padding */
+            /* padding-top: 5px; */
+            /* padding-bottom:5px; */
+            /* 21. 外層容器加入 border*/
+            /* border: 1px solid lightcoral; */
+        }
+        .mydiv{
+            background-color: lightgreen;
+            /* 22. 改變為  display: inline-block; */
+            /* display: inline-block; */
+        }
+    </style>
+
+</head>
+
+<body>
+   
+    <!-- 10. 試試看，在 .box> div 加入 margin-top 樣式，放在第一個mydiv，在mydiv層沒辦法設定 -->
+    <!-- 有3個解法，20/21/22 -->
+    <div class="box">
+        <div class="mydiv" style="margin-top: 50px;">A</div>
+        <div class="mydiv" style="margin-bottom: 50px;">A</div>
+
+    </div>
+
+    <hr>
+
+    <div class="box">
+        <div class="mydiv">B</div>
+    </div>
+
+</body>
+
+</html>

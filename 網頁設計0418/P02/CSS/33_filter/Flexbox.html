@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>版面</title>
+    <style>
+        /* 邊界、留白重設0 */
+        *{margin: 0;padding: 0;}
+        body{
+            /* 寬度為視窗的100% */
+            width: 100%;
+            min-width: 600px;
+            max-width: 960px;
+            background-color: bisque;
+            margin: 0 auto;
+        }
+        header{
+            width: 100%;
+            background-color: lightgray;
+        }
+        main{
+            width: 70%;
+            height: 300px;
+            background-color: lightcoral;
+            float: left;
+        }
+        aside{
+            width: 28%;
+            height: 300px;
+            background-color: lightblue;
+            float: right;
+        }
+        footer{
+            width: 100%;
+            background-color: lightgray;
+            /* 解除頁尾文繞圖 */
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>頁首</h1></header>
+    <main><h1>主要內容</h1></main>
+    <aside><h1>側邊欄</h1></aside>
+    <footer><h1>頁尾</h1></footer>
+</body>
+</html>

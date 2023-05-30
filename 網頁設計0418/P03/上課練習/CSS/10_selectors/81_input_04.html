@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 04-01. 設定取得焦點的背景顏色greenyellow */
+        /* :focus */
+        #tb:focus {
+            background-color: greenyellow;
+        }
+
+        /* 04-02. 設定勾選時 label 顏色 blue */
+        #cb:checked+label {
+            color: blue;
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <!-- 04-01. -->
+        <input type="text" id="tb">
+
+        <br><br>
+        <!-- 04-02. -->
+        <input type="checkbox" id="cb">
+        <label for="cb">待辦事項一</label>
+    </form>
+</body>
+</html>

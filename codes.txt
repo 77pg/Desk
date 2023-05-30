@@ -1,0 +1,65 @@
+
+
+<script>
+
+    $("#okButton").on("click", async function () {
+        var dataToServer = {
+            title: $("#Name").prop("value"),
+            isComplete: $("#IsComplete").prop("checked") ? 1 : 0
+        }
+        var result = await $.ajax({
+            type: "post",
+            url: "/todo/create",
+            contentType: "application/json",
+            data: JSON.stringify(dataToServer)
+        });
+        // console.log(result);
+        window.location = "/index.html";
+    })
+    
+</script>
+
+
+_______________________________________________________________
+
+2023-05-16  16:30
+_______________________________________________________________
+
+
+<script>
+
+    var todoTable = [
+        {todoTableId: 1, title: "Job XXX", isComplete: 1},
+        {todoTableId: 2, title: "Job YYY", isComplete: 0},
+        {todoTableId: 3, title: "Job ZZZ", isComplete: 1}
+    ];
+
+    $.get("/todo/list", function (e) {
+        todoTable = e;
+        $("#jobList tbody").empty();
+        for (let i = 0; i < todoTable.length; i++) {
+            let trText = `
+                <tr>
+                    <td>
+                        ${todoTable[i].title}
+                    </td>
+                    <td>
+                        <input class="check-box" disabled="disabled"
+                            type="checkbox" ${ todoTable[i].isComplete ? "checked" : "" } />
+                    </td>
+                    <td>
+                        <span class="float-right">
+                            <a href="edit.html" class="btn btn-outline-primary btn-sm">編輯</a> |
+                            <a href="delete.html" class="btn btn-outline-danger btn-sm">刪除</a>
+                        </span>
+                    </td>
+                </tr>
+            `;
+
+            $("#jobList tbody").append(trText);
+        }
+    })
+
+
+
+</script>   

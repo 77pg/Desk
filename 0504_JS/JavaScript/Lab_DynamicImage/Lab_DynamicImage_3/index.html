@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Dynamic Image Lab</title>
+</head>
+
+<body>
+
+	<p>...</p>
+
+	<a id="imgshref" href="http://oakland.athletics.mlb.com/" target="_blank">
+		<img src="images/oak.gif" id="imgs" border="0" />
+	</a>
+
+	<p>...</p>
+
+	<script type="text/javascript">
+
+		var iImage = 0;
+		setImage();
+
+		function setImage() {
+			var img = new Array();
+			var url = new Array();
+			img[0] = "images/chc.gif"; url[0] = "http://chicago.cubs.mlb.com/";
+			img[1] = "images/oak.gif"; url[1] = "http://oakland.athletics.mlb.com/";
+			img[2] = "images/sd.gif"; url[2] = "http://sandiego.padres.mlb.com/";
+			img[3] = "images/was.gif"; url[3] = "http://washington.nationals.mlb.com/";
+			// // 第一種
+			// if(iImage>=4){
+			// 	iImage=0;
+			// }
+
+			// 第2種
+			// if (iImage == 3) {
+			// 	iImage = -1;
+			// }
+			iImage = iImage + 1;
+
+			// 為什麼圖片都不會變呢？
+
+			document.getElementById("imgs").src = img[iImage%4];
+			document.getElementById("imgshref").href = url[iImage%4];
+
+			setTimeout(setImage, 500);
+		}
+
+	</script>
+
+</body>
+
+</html>

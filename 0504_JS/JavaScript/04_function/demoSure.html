@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="report"></div>
+    <script>
+        var num = 3;
+        report.innerText = num + 10000;
+        report.innerText = (num + 10000).toString();
+        report.innerText = (num + 10000).toString().substr(1, 4);
+        var obj = {
+            firstName: "Jeremy"
+        }
+        // obj.lastName = "Lin";
+        obj["lastName"] = "Lin";
+        // alert(obj.lastName);
+        alert(obj["firstName"]);
+
+    </script>
+</body>
+
+</html>

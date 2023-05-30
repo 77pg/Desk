@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>濾鏡</title>
+    <style>
+        img {
+            width: 300px;
+            /* 灰階*/
+            /* filter: grayscale(100%); */
+            /* 對比度 */
+            /* filter: contrast(200%); */
+            /* 模糊，單位是px */
+            /* filter: blur(5px); */
+            /* 明亮度 */
+            /* filter: brightness(200%); */
+            /* 飽和度 */
+            /* filter: saturate(8); */
+            /* 請在這邊測試各種濾鏡的效果；注意不同濾鏡需要的參數單位不同 */
+            /* 多個濾鏡 */
+            /* filter:contrast(200%) brightness(150%); */
+        }
+        img#blur1:checked{filter: blur(5px);}
+    </style>
+</head>
+<body>
+    <img src="./img/sunny.jpg" alt="sunny1" name="img1">
+    <input type="radio" id="blur1" >
+    <label for="blur1">blur(5px)</label>
+    <input type="radio" id="bright">
+    <label for="bright">brightness(200%)</label>
+    <input type="radio" id="contrast">
+    <label for="contrast">contrast(200%)</label>
+    <hr><br><br>
+</body>
+</html>

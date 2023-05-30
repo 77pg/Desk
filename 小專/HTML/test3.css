@@ -1,0 +1,24 @@
+.main_navbar{
+    background-color: brown;
+}
+.nav-link{
+    opacity: 1;
+    transition: 0.3s;
+}
+.nav-link:hover{
+    opacity: 0.6;
+}
+.footer{
+    /* display: block; */
+    clear: both;
+    position: relative;
+    height: 100px;
+    margin-top: -10px;
+    color: #464545;
+}
+.highlight-text {
+    color: rgb(2, 74, 156); 
+    /* 設定文字顏色為紅色 */
+    font-weight: bold; /* 設定文字為粗體 */
+    /* 在這裡您可以進一步調整其他樣式，例如字體大小、字體風格等 */
+}

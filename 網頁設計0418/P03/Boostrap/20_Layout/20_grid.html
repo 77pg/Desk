@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+    <Style>
+        /* odd基數，even是偶數 */
+        .col:nth-child(odd),
+        .col-4:nth-child(odd),
+        .col-5:nth-child(odd),
+        .col-8:nth-child(odd),
+        .col-md-2:nth-child(odd),
+        .col-lg-3:nth-child(odd) {
+            background-color: darkcyan;
+        }
+
+        .col:nth-child(even),
+        .col-4:nth-child(even),
+        .col-5:nth-child(even),
+        .col-8:nth-child(even),
+        .col-md-2:nth-child(even),
+        .col-lg-3:nth-child(even) {
+            background-color: lightblue;
+        }
+    </Style>
+</head>
+
+<body>
+
+    <h4>Bootstrap Grids</h4>
+    <p><a
+            href="https://www.w3schools.com/bootstrap5/bootstrap_grid_basic.php">https://www.w3schools.com/bootstrap5/bootstrap_grid_basic.php</a>
+    </p>
+    <h4>Bootstrap Grid Examples</h4>
+    <p><a
+            href="https://www.w3schools.com/bootstrap5/bootstrap_grid_examples.php">https://www.w3schools.com/bootstrap5/bootstrap_grid_examples.php</a>
+    </p>
+    <h4>Grid options</h4>
+    <p><a
+            href="https://getbootstrap.com/docs/5.2/layout/grid/#grid-options">https://getbootstrap.com/docs/5.2/layout/grid/#grid-options</a>
+    </p>
+
+    <h4>Row columns</h4>
+    <p><a
+            href="https://getbootstrap.com/docs/5.2/layout/grid/#row-columns">https://getbootstrap.com/docs/5.2/layout/grid/#row-columns</a>
+    </p>
+    <h4>Nesting</h4>
+    <p><a
+            href="https://getbootstrap.com/docs/5.2/layout/grid/#nesting">https://getbootstrap.com/docs/5.2/layout/grid/#nesting</a>
+    </p>
+    <hr>
+
+    <!-- 10. 請試著透過 col-* 或者 row-cols-* 的設定，將畫面平分成四欄 -->
+    <!-- 一定要在最外層加上row，因為在css檔.col有flex屬性
+        ，父子層要有display:flex; -->
+    <!-- 規定一排12等分，如果超過12份，還是會擠出空間給13等份 -->
+    <h1>.col</h1>
+    <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+        <div class="col">6</div>
+        <div class="col">7</div>
+        <div class="col">8</div>
+        <div class="col">9</div>
+        <div class="col">10</div>
+        <div class="col">11</div>
+        <div class="col">12</div>
+        <div class="col">13</div>
+    </div>
+    <br><br>
+    <hr>
+    <h1>.col-數字</h1>
+    <div class="row">
+        <div class="col-4">col-4</div>
+        <div class="col-4">col-4</div>
+        <div class="col-4">col-4</div>
+        <div class="col-4">col-4</div>
+    </div>
+    <br><br>
+    <hr>
+    <h1>.col-數字,超出12放到下一排，一列可能不滿十二</h1>
+    <div class="row">
+        <div class="col-5">col-5</div>
+        <div class="col-8">col-8</div>
+    </div>
+    <br><br>
+    <hr>
+    <!-- 20. 請試著透過 col-斷點-* 的設定當瀏覽器寬度 ≥768px 時，將畫面平分成兩欄 -->
+    <h1>.col-斷點-數字2</h1>
+    <div class="row">
+        <div class="col-md-2">col-123456789</div>
+        <div class="col-md-2">col-12345678910</div>
+        <div class="col-md-2">col-1234567891011</div>
+    </div>
+    <br>
+    <hr>
+    <!-- 延伸:當畫面寬度≥992px時，每個div佔三等分 -->
+    <h1>.col-斷點-數字3</h1>
+    <div class="row">
+        <div class="col-md-6 col-lg-3">col-123456789</div>
+        <div class="col-md-6 col-lg-3">col-12345678910</div>
+        <div class="col-md-6 col-lg-3">col-1234567891011</div>
+        <div class="col-md-6 col-lg-3">col-123456789101112</div>
+
+    </div>
+    <br>
+    <hr>
+    <!-- .col- (extra small devices - screen width less than 576px)
+    .col-sm- (small devices - screen width equal to or greater than 576px)
+    .col-md- (medium devices - screen width equal to or greater than 768px)
+    .col-lg- (large devices - screen width equal to or greater than 992px)
+    .col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+    .col-xxl- (xxlarge devices - screen width equal to or greater than 1400px) -->
+    <!-- 30. 觀察現有的網頁，進行巢狀堆疊Grid的練習 -->
+    <h1>.col-row-cols</h1>
+    <div class="row row-cols-2">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+
+    </div>
+    <br>
+    <hr>
+    <h1>.col row-cols1</h1>
+    <div class="row row-cols-2">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+
+    </div>
+    <br>
+    <hr><h1>.col row-cols2</h1>
+    <div class="row row-cols-3">
+        <div class="col">A</div>
+        <div class="col">B</div>
+        <div class="col">C</div>
+        <div class="col">D</div>
+        <div class="col">E</div>
+        <div class="col">F</div>
+    </div>
+    <br>
+    <hr>
+
+</body>
+
+</html>

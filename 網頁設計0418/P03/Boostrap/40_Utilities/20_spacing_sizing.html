@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacing and Sizing</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+
+    <style>
+        .box {
+            height: 100%;
+            background-color: lightcoral;
+            margin-bottom: 10px;
+        }
+
+        .box1 {
+            height: 25vh;
+            background-color: rgb(148, 128, 240);
+            margin-bottom: 10px;
+        }
+        .box>div {
+            background-color: lightskyblue;
+            margin-bottom: 10px;
+        }
+        .box1>div {
+            background-color: rgb(145, 250, 135);
+            margin-bottom: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h4>官方網站-Sizing</h4>
+        <p><a
+                href='https://getbootstrap.com/docs/5.2/utilities/sizing/'>https://getbootstrap.com/docs/5.2/utilities/sizing/</a>
+        </p>
+        <h4>官方網站-Spacing</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/spacing/">https://getbootstrap.com/docs/5.2/utilities/spacing/</a>
+        </p>
+        <h4>Utilities / Helper Classes> 頁面上搜尋 Spacing</h4>
+        <p><a
+                href="https://www.w3schools.com/bootstrap5/bootstrap_utilities.php">https://www.w3schools.com/bootstrap5/bootstrap_utilities.php</a>
+        </p>
+        <hr>
+
+        <!-- 10. 建立巢套的 div 元素
+                 a. 外層 div 使用 .box 類別；在上方 style 區段定義寬度和背景底色等
+                 b. 內層 div 使用 bootstrap 5 提供的 .w-* 類別 -->
+        <div class="box">
+            <div class="w-25">w-25</div>
+            <div class="w-50">w-50</div>
+            <div class="w-75">w-75</div>
+            <div class="w-100">w-100</div>
+            <div class="w-auto">w-auto</div>
+        </div>
+        <br><br>
+        <hr><br><br>
+        <!-- 20. 複製步驟 10 ，內層 div 改為使用 bootstrap 5 提供的 .h-* 類別 -->
+        <div class="box1">
+            <!-- d-inline-block 用display放在同個區塊 -->
+            <div class="h-25 d-inline-block">h-25</div>
+            <div class="h-50 d-inline-block">h-50</div>
+            <div class="h-75 d-inline-block">h-75</div>
+            <div class="h-100 d-inline-block">h-100</div>
+            <div class="h-auto d-inline-block">h-auto</div>
+        </div>
+        <br><hr><br>
+        <!-- 30. 同上，測試 bootstrap 5 提供的 .p-* 類別 -->
+        <!-- .p(padding) -->
+        <div class="box">
+            <div class="w-25 p-0">w-25 p-0</div>
+            <div class="w-25 p-1">w-25 p-1</div>
+            <div class="w-25 p-3">w-25 p-3</div>
+        </div>
+        <br><hr><br>
+
+        <!-- 40. 同上，測試 bootstrap 5 提供的 .m-* 類別 -->
+        <div class="box">
+            <div class="w-25">w-25</div>
+            <div class="w-25 mt-5">w-25 margin top-5(3rem)</div>
+            <div class="w-25">w-25</div>
+        </div>
+        
+        <!-- 50. 測試 bootstrap 5 提供的 .m-auto 類別 -->
+        <div class="box">            
+            <div class="w-25 m-auto">w-25 margin-auto</div>
+        </div>
+        <br><hr><br>
+        <!-- 加上斷點 -->
+        <div class="box">
+            <!-- 滿足md條件，執行p*3 -->
+            <div class="w-25 p-md-5">w-25 p-md-5</div>
+        </div>
+        <br>
+    </div>
+</body>
+
+</html>

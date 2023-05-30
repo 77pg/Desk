@@ -1,0 +1,77 @@
+body{
+    background-color: rgba(245, 222, 179, 0.479);
+}
+.content-container {
+    padding-bottom: 100px;
+}
+
+a {
+    color: rgb(121, 120, 120);
+    /* font-weight: bold; */
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(21, 141, 253);
+    font-weight: bold;
+}
+.navbar{
+    background: linear-gradient(to right, rgb(252, 196, 186), rgb(195, 241, 255));
+}
+
+.nav-link {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    opacity: 0.6;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.custom-carousel-container {
+    max-width: 100%;
+    /* 最大寬度為容器的寬度 */
+    height: 600px;
+    /* 定義輪播圖的固定高度 */
+}
+
+.priceList{
+    font-family: serif;
+    font-size: 24px;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, rgba(240, 128, 128, 0.486), rgba(173, 216, 230, 0.479));
+    padding: 50px 10px  0px 20px;
+    color: #8176768c;
+}
+.footer p,
+.footer span{
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: justify;
+}
+.footer h1,
+.footer h6{
+    text-align: center;
+}
+.footer h6{
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+}

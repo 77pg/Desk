@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+        // class Animal {
+        //     weight = 0;
+        // }
+        // var obj = new Animal();
+        // obj.weight = 6;
+
+        // var obj2 = new Animal();
+        // obj2.weight = 9;
+
+        // var obj3 = obj;
+        // obj3.weight = 7;
+        // alert(obj.weight);
+
+
+        // class Animal {
+        //     weight = 1;
+        //     // play = function () {
+        //     //     alert("Play...");
+        //     // }
+        //     play = () => {
+        //         alert("Play...(ver 2.0)");
+        //     }
+        //     makeSound() {
+        //         alert("Animal: ...");
+        //     }
+        // }
+        // var obj = new Animal(); // null;
+        // obj.play();
+        // // obj.makeSound();
+        // obj.weight = 6;
+        // alert(obj.weight);
+        // var person = {
+        //     firstName: "Jeremy"
+        // }
+        // alert(person.firstName);
+
+        class Animal {
+            constructor(weightValue = 1) {
+                // 預設值weightValue = 1
+                // 把new Dog裡的weightValue丟到weight
+                this.weight = weightValue;
+            }
+            set weight(value) {
+                if (value > 0) {
+                    this._weight = value;
+                }
+            }
+            get weight() {
+                return this._weight;
+            }
+            makeSound() {
+                alert("Animal: ...");
+            }
+        }
+        class Dog extends Animal {
+            constructor(weightValue, locationValue) {
+                // 往上找weightValue
+                super(weightValue);
+                this.location = locationValue;
+            }
+            makeSound() {
+                // super會往上找父階，往上找
+                super.makeSound();
+                alert("Dog: Wan! Wan!");
+            }
+        }
+        // 呼叫Dog，Dog裡的weightValue=6,locationValue=TC
+        var obj = new Dog(5, "TC");
+        alert("Weight=" + obj.weight);
+        alert("Location=" + obj.location);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>opacity</title>
+
+    <style>
+        img {
+            width: 200px;
+        }
+
+        /* 選擇圖片， */
+        /* 並且設定 opacity 的值，觀察變化 */
+        /* 第一張圖片設定 1   */
+        img:nth-of-type(1) {
+            opacity: 1;
+        }
+        
+        /* 第二張圖片設定 0.5 */
+        img:nth-of-type(2) {
+            opacity: 0.5;
+        }
+        
+        /* 第三張圖片設定 0   */
+        img:nth-of-type(3) {
+            opacity: 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="img/sunny.jpg">
+        <img src="img/sunny.jpg">
+        <img src="img/sunny.jpg">
+    </div>
+</body>
+
+</html>

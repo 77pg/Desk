@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.toast.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="page-header">
+            <h2>哪一隻是貓?</h2>
+        </div>
+
+        <div class="row" id="divPets">
+
+            <div class="col-sm-4">
+                <img id="imgDog" data-species="狗" ; src="images/dog.jpeg" class="pet img-responsive img-thumbnail" />
+            </div>
+
+            <div class="col-sm-4">
+                <img id="imgCat" data-species="貓" ; src="images/cat.jpeg" class="pet img-responsive img-thumbnail" />
+            </div>
+
+            <div class="col-sm-4">
+                <img id="imgRabbit" data-species="兔子" ; src="images/rabbit.jpeg"
+                    class="pet img-responsive img-thumbnail" />
+            </div>
+
+        </div> <!-- end of row -->
+
+    </div> <!-- end of container -->
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.toast.js"></script>
+
+    <script>
+
+        // 使用方式:
+        // showToast("標題", "提示文字") 例如:
+        // showToast("Hint", "請點一下正確的圖案");
+        function showToast(heading, message) {
+            $.toast({
+                text: message, // Text that is to be shown in the toast
+                heading: heading, // Optional heading to be shown on the toast
+                icon: 'warning', // Type of toast icon
+                showHideTransition: 'fade', // fade, slide or plain
+                allowToastClose: true, // Boolean value true or false
+                hideAfter: 2000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+                stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+                position: 'top-right', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+                textAlign: 'left',  // Text alignment i.e. left, right or center
+                loader: true,  // Whether to show loader or not. True by default
+                loaderBg: '#9ec600',  // Background color of the toast loader
+                beforeShow: function () { }, // will be triggered before the toast is shown
+                afterShown: function () { }, // will be triggered after the toat has been shown
+                beforeHide: function () { }, // will be triggered before the toast gets hidden
+                afterHidden: function () { }  // will be triggered after the toast has been hidden
+            });
+        }
+
+
+        $(function () {
+            $(".pet").mouseenter(function () {
+                $(this).removeClass("img-thumbnail");
+            })
+
+            $(".pet").mouseleave(function () {
+                $(this).addClass("img-thumbnail");
+            })
+
+            // 請接著寫作
+            // Lab 程式:
+
+            showToast("Hint", "請點一下正確的圖案");
+
+            // 寫法一:
+            // var speciesList = ["狗狗", "貓", "兔兔"];
+            // $(".pet:eq(0)").data("species", speciesList[0]);
+            // $(".pet:eq(1)").data("species", speciesList[1]);
+            // $(".pet:eq(2)").data("species", speciesList[2]);
+
+            // 改成迴圈寫法:
+
+            // var speciesList = ["狗狗", "貓", "兔兔"];
+            // for (var i = 0; i < speciesList.length; i++) {
+            //     var filter = ".pet:eq(" + i + ")";
+            //     $(filter).data("species", speciesList[i]);
+            // }
+
+            // 寫法二:
+            // var speciesList = ["狗狗", "貓", "兔兔"];
+            // for (let i = 0; i < speciesList.length; i++) {
+            //     var selector = `.pet: eq(${i})`;
+            //     $(selector).data("species", speciesList[i]);
+            //     // showToast("Hint", selector);
+            //     // $(".pet").eq(i).data("species", speciesList[i]);
+            // }
+
+
+
+            // var speciesList = ["狗狗", "貓", "兔兔"];
+            // for (var i = 0; i < speciesList.length; i++) {
+            //     var filter = ".pet:eq(" + i + ")";
+            //     $(filter).data("species", speciesList[i]);
+            // }
+
+            // 寫法三:
+            // var speciesList = ["狗狗", "貓", "兔兔"];
+            //  //找到pet有三個，程式跑三次
+            //  //obj物件 參考key
+            // $(".pet").each(function (key, obj) {
+            //     $(obj).data("species", speciesList[key]);
+            // })
+
+
+            // 按下function
+            $(".pet").click(function () {
+                var kind = $(this).data("species");
+                if (kind != "貓") {
+                    showToast("Hint", "不對!我是" + kind);
+                    $(this).fadeTo("slow", 0.4);
+
+
+                }
+                else {
+                    showToast("Hint", "對了！　叮咚叮！我是~" + kind);
+                    $(".pet").not("img[data-species='貓']").fadeTo("fast", 0.5);
+                }
+            });
+
+            // 總結
+            // $("selctor").html
+            // $("selctor").text
+            // $("selctor").append
+            // $("selctor").prop
+            // $("selctor").attr
+            // $("selctor").css
+            // $("selctor").addClass
+            // $("selctor").removeClass
+            // $("selctor").toogleClass
+            // $("selctor").on("eventName", fn)
+            // $("selctor").off("eventName")
+            // $("selctor").fadeIn().fadeOut().fadeTo()
+            // $("selctor").eq()
+            // $("selctor").not()
+            // $("selctor").each()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        })  // end of init.
+
+    </script>
+
+</body>
+
+</html>
